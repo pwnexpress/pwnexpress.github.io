@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <!-- css -->
+     <link rel="stylesheet" href="/assets/css/_misc/download.css">
+    <!-- endOfCss -->
+</head>
+<body>
+    {% include navbar.html %}
+    <div class="main_containt">
+        <section class="banner">
+            <h1>
+                Download Project Under Pwn Sift
+            </h1>
+        </section>
+        <div class="post">
+            <section class="inside-post">
+                <div class="post-scope">
+                    <div class="head">
+                        <h1>Latest Pwn Sift Download Archives</h1>
+                    </div>
+                    <div class="scope-main-content">
+                        <section class="fill-content">
+                            {{ content }}
+                        </section>
+                        <section class="right-side-content">
+                            <h2>
+                                Recent post
+                            </h2>
+                            <section class="post-in-sidebar">
+                                <ul>
+                                    {% for post in site.posts limit:5 %}
+                                    <li class="card">
+                                        <a href="{{ post.url }}">
+                                            <img src="{{ post.thumbnail}}">
+                                            <section class="post-detail">
+                                                <span>
+                                                    {{ post.date | "%-d %B %Y" }}
+                                                </span>
+                                                <h1>
+                                                    {{ post.title }}
+                                                </h1>
+                                            </section>
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+
+    if (window.scrollY > 80) {
+        navbar.classList.add("shrink");
+    } else {
+        navbar.classList.remove("shrink");
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <!-- css -->
+     <link rel="stylesheet" href="/assets/css/_index/index.css">
+     <link rel="stylesheet" href="/assets/css/_misc/navbar.css">
+    <!-- endOfCss -->
+
+    <!-- js -->
+    <script src="/assets/js/navbar.js"></script>
+    <!-- endJS -->
+</head>
+<body>
+    {% include navbar.html %}
+    <div class="main_containt">
+        <section class="banner">
+            <h1>
+                Pwn Sift Blog
+            </h1>
+        </section>
+        <div class="post">
+            <section class="inside-post">
+                <div class="post-scope">
+                    <div class="head">
+                        <h1>Pwn Sift News & Tutorials</h1>
+                    </div>
+                    <div class="list-post">
+                        <ul class="fuckoff">
+                            {% for post in site.posts %}
+                            <li class="card">
+                                <a href="{{ post.url }}">
+                                    <img src="{{ post.thumbnail }}">
+                                    <section class="post-detail">
+                                        <h1>
+                                            {{ post.title }}
+                                        </h1>
+                                        <span>
+                                            {{ post.date | "%-d %B %Y" }}
+                                        </span>
+                                        <p>
+                                            {{ post.description }}
+                                        </p>
+                                    </section>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
