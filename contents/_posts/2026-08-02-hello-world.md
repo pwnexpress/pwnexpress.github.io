@@ -38,4 +38,4 @@ I’ll also be more active here; suffice it to say that all projects are being m
 
 ## Conclusion
 
-`Pwn Sift` is maintained by me ([@me-joe](https://github.com/me-joe)) for every my project i made (Develop). `Pwn Sift` is **NOT** organization nor Community project.
+`Pwn Sift` is maintained by me ([@me-joe](https://github.com/me-joe)) for every project i made (Develop). `Pwn Sift` is **NOT** organization nor Community project.
