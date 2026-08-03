@@ -115,7 +115,22 @@ body{
     font-size:15px;
     color:#444;
     margin-bottom: 40px;
+    margin-top: 40px;
 }
+
+.language-plaintext.highlighter-rouge{
+    display:inline-block;
+    padding:2px 6px;
+    font-size:.9em;
+    font-weight:600;
+    color:#8b8b8b;
+    background:#f3f3f3;
+    border:1px solid #d6d6d6;
+    border-radius:4px;
+    text-shadow: 0 1px 0 #fff, 0 2px 1px rgba(0,0,0,.12);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9),0 1px 2px rgba(0,0,0,.12);
+}
+
 
 /* Header */
 .fill-content th{
